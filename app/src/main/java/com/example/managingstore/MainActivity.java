@@ -13,15 +13,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button userButton = (Button) findViewById(R.id.userButton);
-        userButton.setOnClickListener(view -> {
-            Intent intent = new Intent(getApplicationContext(), UserLogin.class);
-            startActivity(intent);
-        });
-
-        Button managerButton = (Button) findViewById(R.id.managerButton);
-        managerButton.setOnClickListener(view -> {
-            Intent intent = new Intent(getApplicationContext(), ManagerLogin.class);
+        setActivity(R.id.userButton,UserLogin.class);
+        setActivity(R.id.managerButton,ManagerLogin.class);
+    }
+    void setActivity(int ID, java.lang.Class<?> cls){
+        Button button = (Button)findViewById(ID);
+        button.setOnClickListener(view -> {
+            Intent intent = new Intent(getApplicationContext(), cls);
             startActivity(intent);
         });
     }

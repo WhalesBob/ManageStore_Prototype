@@ -3,6 +3,7 @@ package com.example.managingstore;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.EditText;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
@@ -18,15 +19,10 @@ public class ManagerLogin extends AppCompatActivity {
         Button loginButton = (Button)findViewById(R.id.loginButton);
         loginButton.setOnClickListener(view -> {
 
-            /*TODO : DB 와 소켓통신으로 개발해야 되는 부분.
-             * 로그인 기능 구현해서, 관리자인지, 사용자인지 여부 체크하거나 아니면 DB를 따로 파서 관리할 것.
-             * 당장은 Admin 으로 해서 하나의 id/pw 만 있음. (For making Prototype)
-             */
+            String ID = ((EditText)findViewById(R.id.idInput)).getText().toString();
+            String password = ((EditText)findViewById(R.id.passwordInput)).getText().toString();
 
-            String ID = findViewById(R.id.idInput).toString();
-            String password = findViewById(R.id.passwordInput).toString();
-
-            if(ID.equals("admin") && password.equals("1234")){
+            if(isValid(ID,password)){
                Intent intent = new Intent(getApplicationContext(),ManagerActivity.class);
                startActivity(intent);
             }else{
@@ -37,5 +33,14 @@ public class ManagerLogin extends AppCompatActivity {
                 alert.show();
             }
         });
+    }
+    boolean isValid(String ID, String password){
+
+        /*TODO : DB 와 소켓통신으로 개발해야 되는 부분.
+         * 로그인 기능 구현해서, 관리자인지, 사용자인지 여부 체크하거나 아니면 DB를 따로 파서 관리할 것.
+         * 당장은 Admin 으로 해서 하나의 id/pw 만 있음. (For making Prototype)
+         */
+
+        return ID.equals("admin") && password.equals("1234");
     }
 }
