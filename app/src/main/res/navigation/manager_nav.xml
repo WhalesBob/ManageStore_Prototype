@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/manager_nav"
+    app:startDestination="@id/managerFirstFragment">
+
+    <fragment
+        android:id="@+id/managerFirstFragment"
+        android:name="com.example.managingstore.manager.AddUpPictures"
+        android:label="fragment_manager_first"
+        tools:layout="@layout/fragment_manager_first" />
+    <fragment
+        android:id="@+id/managerSecondFragment"
+        android:name="com.example.managingstore.manager.CheckPictures"
+        android:label="fragment_manager_second"
+        tools:layout="@layout/fragment_manager_second" />
+    <fragment
+        android:id="@+id/managerThirdFragment"
+        android:name="com.example.managingstore.manager.OtherSettings"
+        android:label="fragment_manager_third"
+        tools:layout="@layout/fragment_manager_third" />
+</navigation>

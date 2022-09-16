@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/managerFirstFragment"
+        android:title="Menu1"
+        android:icon="@drawable/ic_home"/>
+
+    <item
+        android:id="@+id/managerSecondFragment"
+        android:title="Menu2"
+        android:icon="@drawable/ic_person"/>
+
+    <item
+        android:id="@+id/managerThirdFragment"
+        android:title="Menu3"
+        android:icon="@drawable/ic_settings"/>
+</menu>

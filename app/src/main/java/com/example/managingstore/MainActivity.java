@@ -6,6 +6,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 
+import com.example.managingstore.login.ManagerLogin;
+import com.example.managingstore.login.UserLogin;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -13,8 +16,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        setActivity(R.id.userButton,UserLogin.class);
-        setActivity(R.id.managerButton,ManagerLogin.class);
+        setActivity(R.id.userButton, UserLogin.class);
+        setActivity(R.id.managerButton, ManagerLogin.class);
     }
     void setActivity(int ID, java.lang.Class<?> cls){
         Button button = (Button)findViewById(ID);

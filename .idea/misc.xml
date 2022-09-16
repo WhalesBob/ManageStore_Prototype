@@ -4,8 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/ndw82/AndroidStudioProjects/ManagingStore/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/ndw82/AndroidStudioProjects/ManagingStore/app/src/main/res/layout/fragment_manager_first.xml" value="0.1" />
+        <entry key="..\:/Users/ndw82/AndroidStudioProjects/ManagingStore/app/src/main/res/layout/fragment_manager_second.xml" value="0.24947916666666667" />
+        <entry key="..\:/Users/ndw82/AndroidStudioProjects/ManagingStore/app/src/main/res/layout/fragment_manager_third.xml" value="0.24947916666666667" />
         <entry key="..\:/Users/ndw82/AndroidStudioProjects/ManagingStore/app/src/main/res/layout/manager_domain.xml" value="0.24947916666666667" />
         <entry key="..\:/Users/ndw82/AndroidStudioProjects/ManagingStore/app/src/main/res/layout/manager_login.xml" value="0.264" />
+        <entry key="..\:/Users/ndw82/AndroidStudioProjects/ManagingStore/app/src/main/res/menu/manager_bottom_menu.xml" value="0.24564102564102563" />
       </map>
     </option>
   </component>

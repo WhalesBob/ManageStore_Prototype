@@ -1,4 +1,4 @@
-package com.example.managingstore;
+package com.example.managingstore.login;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,6 +8,9 @@ import android.widget.EditText;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.managingstore.manager.ManagerActivity;
+import com.example.managingstore.R;
 
 public class ManagerLogin extends AppCompatActivity {
 
@@ -23,14 +26,14 @@ public class ManagerLogin extends AppCompatActivity {
             String password = ((EditText)findViewById(R.id.passwordInput)).getText().toString();
 
             if(isValid(ID,password)){
-               Intent intent = new Intent(getApplicationContext(),ManagerActivity.class);
-               startActivity(intent);
+                Intent intent = new Intent(getApplicationContext(), ManagerActivity.class);
+                startActivity(intent);
             }else{
                 AlertDialog.Builder alert = new AlertDialog.Builder(this);
-                alert.setTitle("로그인 실패");
-                alert.setPositiveButton("확인", (dialog, which) -> dialog.dismiss());
-                alert.setMessage("아이디 혹은 비밀번호가 틀렸거나, 존재하지 않는 관리자입니다.");
-                alert.show();
+                alert.setTitle("로그인 실패")
+                        .setPositiveButton("확인", (dialog, which) -> dialog.dismiss())
+                        .setMessage("아이디 혹은 비밀번호가 틀렸거나, 존재하지 않는 관리자입니다.")
+                        .show();
             }
         });
     }
