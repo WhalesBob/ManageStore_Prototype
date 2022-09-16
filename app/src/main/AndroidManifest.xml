@@ -2,6 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.managingstore">
 
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -21,7 +26,5 @@
         <activity android:name=".manager.ManagerActivity" />
         <activity android:name=".login.UserLogin"/>
         <activity android:name=".login.ManagerLogin"/>
-
     </application>
-
 </manifest>
